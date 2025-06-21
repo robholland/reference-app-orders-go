@@ -71,7 +71,7 @@ jobs:
           target: oms-worker
           tags: ${{ steps.meta-worker.outputs.tags }}
           labels: ${{ steps.meta-worker.outputs.labels }}
-          push: ${{ github.event_name != 'pull_request' }}
+          push: true
 
       - name: Build and push oms-go-api Docker image
         uses: docker/build-push-action@v5.3.0
@@ -80,7 +80,7 @@ jobs:
           target: oms-api
           tags: ${{ steps.meta-api.outputs.tags }}
           labels: ${{ steps.meta-api.outputs.labels }}
-          push: ${{ github.event_name != 'pull_request' }}
+          push: true
 
       - name: Build and push oms-go-codec-server Docker image
         uses: docker/build-push-action@v5.3.0
@@ -89,4 +89,4 @@ jobs:
           target: oms-codec-server
           tags: ${{ steps.meta-codec-server.outputs.tags }}
           labels: ${{ steps.meta-codec-server.outputs.labels }}
-          push: ${{ github.event_name != 'pull_request' }}
+          push: true
