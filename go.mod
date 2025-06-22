@@ -4,7 +4,7 @@ go 1.23.0
 
 toolchain go1.24.1
 
-replace go.temporal.io/sdk => github.com/robholland/sdk-go v1.1.1-0.20250621123011-b081683d6c40
+replace go.temporal.io/sdk => github.com/robholland/sdk-go v1.1.1-0.20250622095959-e8e530fb745a
 
 require (
 	github.com/google/uuid v1.6.0
